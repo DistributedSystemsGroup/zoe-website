@@ -4,10 +4,9 @@ layout: default
 
 <div class="header-container jumbotron">
     <div class="container">
-        <h1>Jekyll Template for Project Websites</h1>
-        <p>Simple and modern design for publishing blog posts, documentation and many more things for your project.
-          You can now clone and start to create a website for your project like this one.</p>
-        <p><a class="btn btn-primary btn-lg" href="{{ "/docs/home/" | prepend: site.baseurl }}" role="button">Learn more</a></p>
+        <h1>Zoe - Analytics on demand</h1>
+        <p>Zoe provides a simple way to provision data analytics clusters and workflows.</p>
+        <p><a class="btn btn-primary btn-lg" href="http://docs.zoe-analytics.eu/" role="button">Learn more</a></p>
     </div>
 </div>
 
@@ -16,7 +15,7 @@ layout: default
 
     <div class="row">
         <div class="col-md-6">
-            <h2 class="header-light regular-pad">What is Jekyll?</h2>
+            <h2 class="header-light regular-pad">What is Zoe?</h2>
             <blockquote>
               <p>Jekyll is a simple, blog-aware, static site generator. It takes a template
               directory containing raw text files in various formats, runs it through
@@ -39,22 +38,24 @@ layout: default
     <div class="row">
         <div class="col-sm-4">
             <h1 class="text-center"><i class="fa fa-pencil" aria-hidden="true"></i></h1>
-            <h3 class="text-center">Easy to install and publish</h3>
-            <p>Get started by cloning source into GitHub account of your project. Thanks to <a href="https://pages.github.com">GitHub Pages</a>,
-              it will be automatically compiled and published under your project's subdomain on `github.io`.
-            </p>
+            <h3 class="text-center">Easy to use: a few clicks to start</h3>
+            <p>Use the web interface for launching complex data exploration frameworks in a few clicks, or use the APIs to call Zoe from your own scripts.
+            Zoe is independent from applications. A generic application description language is used to build compositions of analytics services, define resource constraints and configuration options.
+            For example, a user can run Spark or MPI jobs on Zoe, by providing appropriate descriptions and Docker images.</p>
         </div>
         <div class="col-sm-4">
             <h1 class="text-center"><i class="fa fa-cogs" aria-hidden="true"></i></h1>
-            <h3 class="text-center">Modular Styling and Templating</h3>
-            <p>This template uses <a href="https://github.com/twbs/bootstrap-sass">bootstrap-sass</a> along with <a href="https://bootswatch.com/">Bootwatch themes</a>.
-            You can change the theme or write your custom by overwriting bootstrap sass variables for a different color set, font options, etc.</p>
+            <h3 class="text-center">Fast: new clusters in seconds</h3>
+            <p>Zoe can create a fully configured Spark cluster, with 20 compute nodes and an iPython notebook in a few seconds.
+            In this video we show the user-facing command line interface to Zoe and demonstrate how fast and easy it is to define and start a new application.</p>
+            
         </div>
         <div class="col-sm-4">
             <h1 class="text-center"><i class="fa fa-code-fork" aria-hidden="true"></i></h1>
-            <h3 class="text-center">Git-based source control</h3>
-            <p>Leverage from Git version control system by
-              maintaining your documentation along with the source code; publish the page when you merge to the master branch.</p>
+            <h3 class="text-center">Smart: advanced scheduling</h3>
+            <p>Zoe is built from the start to make full use of the available capacity in your Docker cluster. Not only Zoe is smart in placing containers, but when resources are exhausted, Zoe will queue new requests using state of the art scheduling algorithms.
+            Zoe is streamlined for maximum efficiency. As soon as an application is ready for execution, it is translated in Docker commands and deployed.
+            Zoe can provision compute-only applications, but also data layers, like Hadoop HDFS. We keep testing the Zoe concept composing new services and extending Zoe's capabilities. Stay tuned for more!</p>
         </div>
     </div>
 

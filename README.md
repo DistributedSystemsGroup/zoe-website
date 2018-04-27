@@ -14,9 +14,16 @@ gem install bundler
 git clone https://github.com/aksakalli/jekyll-doc-theme.git
 cd jekyll-doc-theme
 
+# Install dependencies
+bundle install
+
 # run jekyll with dependencies
 bundle exec jekyll serve
 ```
+
+## Adding posts
+
+Posts are under the `_posts` directory.
 
 ## License
 
