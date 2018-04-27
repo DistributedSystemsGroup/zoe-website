@@ -1,1 +1,1 @@
-Sitemap: https://zoe-analytics.eu/zoe-website-test//sitemap.xml
+Sitemap: http://0.0.0.0:5555/zoe-website-test//sitemap.xml
