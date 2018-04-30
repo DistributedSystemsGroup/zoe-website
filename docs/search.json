@@ -75,6 +75,11 @@
   },
   
   {
+  "title": "Zoe command line demo",
+  "url": "/zoe-website-test//blog/2016/09/08/zoe-video-tutorial/"
+  },
+  
+  {
   "title": "Donating idle CPU cycles",
   "url": "/zoe-website-test//blog/2016/08/24/donating-cpu-cycles/"
   },
@@ -87,6 +92,16 @@
   {
   "title": "Docker images for Spark 2.0.0-preview",
   "url": "/zoe-website-test//blog/2016/05/27/spark-2/"
+  },
+  
+  {
+  "title": "Zoe command line demo",
+  "url": "/zoe-website-test//blog/2016/02/25/zoe-commandline-demo-2/"
+  },
+  
+  {
+  "title": "Zoe command line demo",
+  "url": "/zoe-website-test//blog/2016/02/16/zoe-commandline-demo/"
   },
   
   {
