@@ -93,6 +93,107 @@
 
 <p><img src="https://zoe-analytics.eu/img/zapp-shop.png" alt="ZApp shop at Eurecom" /></p>
 
+<h2 id="classification">Classification</h2>
+
+<p>Zoe runs processes inside containers and the Zoe application description is very generic, allowing any kind of application to be described in Zoe and submitted for execution. While the main focus of Zoe are so-called “analytic applications”, there are many other tools that can be run on the same cluster, for monitoring, storage, log management, history servers, etc. These applications can be described in Zoe and executed, but they have quite different scheduling constraints. Zoe is not a generic application deployment solution and lacks, by design, features like automatic migration, rolling upgrades, etc.</p>
+
+<p>Please note that in this context an “elastic” service is a service that “can be automatically killed or started”.</p>
+
+<ul>
+  <li>
+    <p>Long running: potentially will never terminate</p>
+
+    <ul>
+      <li>
+        <p>Non elastic</p>
+
+        <ul>
+          <li>
+            <p>Storage: need to have access to non-container storage (volumes or disk partitions)</p>
+
+            <ul>
+              <li>HDFS</li>
+              <li>Cassandra</li>
+              <li>ElasticSearch</li>
+            </ul>
+          </li>
+          <li>
+            <p>Interactive: need to expose web interfaces to the end user</p>
+
+            <ul>
+              <li>Jupyter</li>
+              <li>Spark, Hadoop, Tensorflow, etc history servers</li>
+              <li>Kibana</li>
+              <li>Graylog (web interface only)</li>
+            </ul>
+          </li>
+          <li>
+            <p>Streaming:</p>
+
+            <ul>
+              <li>Logstash</li>
+            </ul>
+          </li>
+          <li>
+            <p>User access</p>
+
+            <ul>
+              <li>Proxies and SSH gateways</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>Elastic (can be automatically resized)</p>
+
+        <ul>
+          <li>
+            <p>Streaming:</p>
+
+            <ul>
+              <li>Spark streaming user jobs</li>
+              <li>Storm</li>
+              <li>Flink streaming</li>
+              <li>Kafka</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Ephemeral: will eventually finish by themselves</p>
+
+    <ul>
+      <li>
+        <p>Elastic:</p>
+
+        <ul>
+          <li>Spark classic batch jobs</li>
+          <li>Hadoop MapReduce</li>
+          <li>Flink</li>
+        </ul>
+      </li>
+      <li>
+        <p>Non elastic:</p>
+
+        <ul>
+          <li>MPI</li>
+          <li>Tensorflow</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>In general, Zoe is not adapted to deploy long-running storage services.</p>
+
+<p>All the applications in the <strong>long-running</strong> category need to be deployed, managed, upgraded and monitored since they are part of the cluster infrastructure. The Jupyter notebook at first glance may seem out of place, but in fact it is an interface to access different computing systems and languages, sometimes integrated in Jupyter itself, but also distributed in other nodes, with Spark or Tensorflow backends. As an interface the user may expect for it to be always there, making it part of the infrastructure.</p>
+
+<p>The <strong>elastic, long-running</strong> applications have a degree more of flexibility, that can be taken into account by Zoe. They all have the same needs as the non-elastic applications, but they can also be scaled according to many criteria (priority, latency, data volume).</p>
+
+<p>The applications in the <strong>ephemeral</strong> category, instead, will eventually terminate by themselves: a batch job is a good example of such applications.</p>
+
 </div>
         </div>
 
