@@ -51,12 +51,12 @@ Zoe strives to satisfy the following requirements:
 
 Kubernetes, OpenStack Sahara, Mesos and YARN are the projects that, each in its own way, come near Zoe, without solving the distributed analytics problem.
 
-Kubernetes
-----------
+#### Kubernetes
+
 Kubernetes is a very complex system, both to deploy and to use. It takes some of the architectural principles from Google Borg and targets data centers with vast amounts of resources. We feel that while Kubernetes can certainly run analytic services in containers, it does so at a very high complexity cost for smaller setups. Moreover, certain scheduler choices in how preemption is managed do not apply well to environments with a limited set of users and compute resources, causing a less than optimal resource usage.
 
-OpenStack Sahara
-----------------
+#### OpenStack Sahara
+
 We know well [OpenStack Sahara](https://wiki.openstack.org/wiki/Sahara), as we have been using it since 2013 and we contributed the Spark plugin. We feel that Sahara has limitations in:
 
  * software support: Sahara plugins support a limited set of data-intensive frameworks, adding a new one means writing a new Sahara plugin and even adding support for a new version requires going through a one-two week (on average) review process.
@@ -65,15 +65,13 @@ We know well [OpenStack Sahara](https://wiki.openstack.org/wiki/Sahara), as we h
 
 Moreover changes to Sahara needs to go through a lengthy review process, that on one side tries to ensure high quality, but on the other side slows down development, especially of major architectural changes, like the ones needed to address the concerns listed above.
 
-Mesos
------
+#### Mesos
 
 Mesos is marketing itself as a data-center operating system. Zoe has no such high profile objective: while Zoe schedules distributed applications, it has no knowledge of the applications it is scheduling and, even more importantly, does not require any change in the applications themselves to be run in Zoe.
 
 Mesos requires that each application provides two Mesos-specific components: a scheduler and an executor. Zoe has no such requirements and runs applications unmodified.
 
-YARN
-----
+#### YARN
 
 YARN, from our point of view, has many similarities with Mesos. It requires application support. Moreover it is integrated in the Hadoop distribution and, while recent efforts are pushing toward making YARN stand up on its own, it is currently tailored for Hadoop applications.
 
