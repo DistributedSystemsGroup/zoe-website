@@ -16,8 +16,11 @@ cd jekyll-doc-theme
 # Install dependencies
 bundle install
 
-# run jekyll with dependencies
+# rebuild and run a test webserver
 bundle exec jekyll serve  --host 0.0.0.0 --port 5555
+
+# just rebuild
+bundle exec jekyll build
 ```
 
 ## Adding posts
