@@ -14,5 +14,5 @@ A ZApp is composed of:
 
 Below there is a screenshot from the ZApp shop in the Eurecom production deployment.
 
-![ZApp shop at Eurecom](img/zapp-shop.png)
+![ZApp shop at Eurecom](/img/zapp-shop.png)
 
