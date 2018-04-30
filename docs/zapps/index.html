@@ -6,32 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Zoe Applications</title>
+    <title>Zapps</title>
     <meta name="description" content="Zoe provides a simple way to provision data analytics clusters and workflows.
 ">
 
 
-    <link rel="stylesheet" href="/zoe-website-test//css/main.css">
-    <link rel="stylesheet" href="/zoe-website-test//css/font-awesome.min.css">
+    <link rel="stylesheet" href="/zoe-website-test/css/main.css">
+    <link rel="stylesheet" href="/zoe-website-test/css/font-awesome.min.css">
 
-    <link rel="shortcut icon" href="/zoe-website-test//favicon.ico?1">
+    <link rel="shortcut icon" href="/zoe-website-test/favicon.ico?1">
     <!-- Begin Jekyll SEO tag v2.2.2 -->
-<title>Zoe Applications | Zoe - Analytics on demand</title>
-<meta property="og:title" content="Zoe Applications" />
-<meta name="author" content="Daniele Venzano" />
+<title>Zapps | Zoe - Analytics on demand</title>
+<meta property="og:title" content="Zapps" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Zoe provides a simple way to provision data analytics clusters and workflows." />
 <meta property="og:description" content="Zoe provides a simple way to provision data analytics clusters and workflows." />
-<link rel="canonical" href="https://zoe-analytics.eu/zoe-website-test//zapps.html" />
-<meta property="og:url" content="https://zoe-analytics.eu/zoe-website-test//zapps.html" />
+<link rel="canonical" href="https://zoe-analytics.eu/zoe-website-test/zapps/" />
+<meta property="og:url" content="https://zoe-analytics.eu/zoe-website-test/zapps/" />
 <meta property="og:site_name" content="Zoe - Analytics on demand" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"WebPage","headline":"Zoe Applications","author":{"@type":"Person","name":"Daniele Venzano"},"description":"Zoe provides a simple way to provision data analytics clusters and workflows.","url":"https://zoe-analytics.eu/zoe-website-test//zapps.html"}</script>
+{"@context":"http://schema.org","@type":"WebPage","headline":"Zapps","description":"Zoe provides a simple way to provision data analytics clusters and workflows.","url":"https://zoe-analytics.eu/zoe-website-test/zapps/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-    <link rel="canonical" href="https://zoe-analytics.eu/zoe-website-test//zapps.html">
-    <link rel="alternate" type="application/rss+xml" title="Zoe - Analytics on demand" href="https://zoe-analytics.eu/zoe-website-test//feed.xml" />
+    <link rel="canonical" href="https://zoe-analytics.eu/zoe-website-test/zapps/">
+    <link rel="alternate" type="application/rss+xml" title="Zoe - Analytics on demand" href="https://zoe-analytics.eu/zoe-website-test/feed.xml" />
 </head>
 
 
@@ -46,17 +45,17 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-            <a class="navbar-brand" href="/zoe-website-test//">
-                <span><img src="/zoe-website-test//img/logonav.png"></span> Zoe - Analytics on demand
+            <a class="navbar-brand" href="/zoe-website-test/">
+                <span><img src="/zoe-website-test/img/logonav.png"></span> Zoe - Analytics on demand
             </a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li ><a href="/zoe-website-test//blog/2017/12/15/release-zoe-2017-12/">Blog</a></li>
-                <li><a href="https://docs.zoe-analytics.eu">Docs</a></li>
-                <li ><a href="/zoe-website-test//papers/">Papers</a></li>
-                <li ><a href="/zoe-website-test//zapps/">ZApps</a></li>
-                <li ><a href="/zoe-website-test//about/">About</a></li>
+                <li ><a href="/zoe-website-test/blog/2017/12/15/release-zoe-2017-12/">Blog</a></li>
+                <li><a href="http://docs.zoe-analytics.eu">Docs</a></li>
+                <li ><a href="/zoe-website-test/papers/">Papers</a></li>
+                <li ><a href="/zoe-website-test/zapps/">ZApps</a></li>
+                <li ><a href="/zoe-website-test/about/">About</a></li>
             </ul>
             <div class="navbar-right">
                 <form class="navbar-form navbar-left">
@@ -79,8 +78,21 @@
             <div class="container">
     <div class="row">
         <div class="col-md-8">
-            <h1>Zoe Applications</h1>
-            <div id="markdown-content-container"><p>Put here a few examples of Zoe Applications</p>
+            <h1>Zapps</h1>
+            <div id="markdown-content-container"><p>Zoe applications, ZApps, are packaged descriptions of analytics applications. An analytics application is a composition of one or more front-ends, frameworks, libraries, like Jupyter notebooks, Spark clusters, Tensorflow fo PyTorch libraries, etc. We call these analytics services.</p>
+
+<p>A ZApp is composed of:</p>
+
+<ul>
+  <li>One or more docker images (we use Docker for convenience, changing engine and image format is quite easy)</li>
+  <li>A JSON description that tells Zoe how to start the services and in which order</li>
+  <li>A manifest that helps the Zoe web interface to render the ZApp shop</li>
+</ul>
+
+<p>Below there is a screenshot from the ZApp shop in the Eurecom production deployment.</p>
+
+<p><img src="img/zapp-shop.png" alt="ZApp shop at Eurecom" /></p>
+
 </div>
         </div>
 
@@ -102,13 +114,13 @@
 </footer>
 
     <script>
-  var baseurl = '/zoe-website-test/'
+  var baseurl = '/zoe-website-test'
 </script>
 <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="/zoe-website-test//js/bootstrap.min.js "></script>
-<script src="/zoe-website-test//js/typeahead.bundle.min.js "></script>
+<script src="/zoe-website-test/js/bootstrap.min.js "></script>
+<script src="/zoe-website-test/js/typeahead.bundle.min.js "></script>
 
-<script src="/zoe-website-test//js/main.js "></script>
+<script src="/zoe-website-test/js/main.js "></script>
 
 </body>
 

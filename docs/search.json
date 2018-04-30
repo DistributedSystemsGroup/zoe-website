@@ -5,7 +5,7 @@
     
     {
       "title": "",
-      "url": "/zoe-website-test/"
+      "url": "/zoe-website-test"
 
     },
   
@@ -13,7 +13,7 @@
     
     {
       "title": "",
-      "url": "/zoe-website-test/"
+      "url": "/zoe-website-test"
 
     },
   
@@ -21,7 +21,7 @@
     
     {
       "title": "",
-      "url": "/zoe-website-test/"
+      "url": "/zoe-website-test"
 
     },
   
@@ -31,7 +31,7 @@
     
     {
       "title": "",
-      "url": "/zoe-website-test/"
+      "url": "/zoe-website-test"
 
     },
   
@@ -39,7 +39,7 @@
     
     {
       "title": "",
-      "url": "/zoe-website-test/"
+      "url": "/zoe-website-test"
 
     },
   
@@ -47,7 +47,7 @@
     
     {
       "title": "",
-      "url": "/zoe-website-test/"
+      "url": "/zoe-website-test"
 
     },
   
@@ -56,62 +56,62 @@
   
   {
   "title": "Latest stable release of Zoe 2017.12",
-  "url": "/zoe-website-test//blog/2017/12/15/release-zoe-2017-12/"
+  "url": "/zoe-website-test/blog/2017/12/15/release-zoe-2017-12/"
   },
   
   {
   "title": "Latest stable release of Zoe 2017.09",
-  "url": "/zoe-website-test//blog/2017/09/30/release-zoe-2017-09/"
+  "url": "/zoe-website-test/blog/2017/09/30/release-zoe-2017-09/"
   },
   
   {
   "title": "We are proud to announce the latest stable release of Zoe 2017.06",
-  "url": "/zoe-website-test//blog/2017/06/30/release-zoe-2017-06/"
+  "url": "/zoe-website-test/blog/2017/06/30/release-zoe-2017-06/"
   },
   
   {
   "title": "2017.03 release is now live on github!",
-  "url": "/zoe-website-test//blog/2017/03/31/release-zoe-2017-03/"
+  "url": "/zoe-website-test/blog/2017/03/31/release-zoe-2017-03/"
   },
   
   {
-  "title": "Zoe command line demo",
-  "url": "/zoe-website-test//blog/2016/09/08/zoe-video-tutorial/"
+  "title": "Zoe video tutorial",
+  "url": "/zoe-website-test/blog/2016/09/08/zoe-video-tutorial/"
   },
   
   {
   "title": "Donating idle CPU cycles",
-  "url": "/zoe-website-test//blog/2016/08/24/donating-cpu-cycles/"
+  "url": "/zoe-website-test/blog/2016/08/24/donating-cpu-cycles/"
   },
   
   {
   "title": "Zoe supports Cassandra",
-  "url": "/zoe-website-test//blog/2016/07/13/zoe-supports-cassandra/"
+  "url": "/zoe-website-test/blog/2016/07/13/zoe-supports-cassandra/"
   },
   
   {
   "title": "Docker images for Spark 2.0.0-preview",
-  "url": "/zoe-website-test//blog/2016/05/27/spark-2/"
+  "url": "/zoe-website-test/blog/2016/05/27/spark-2/"
   },
   
   {
   "title": "Zoe command line demo",
-  "url": "/zoe-website-test//blog/2016/02/25/zoe-commandline-demo-2/"
+  "url": "/zoe-website-test/blog/2016/02/25/zoe-commandline-demo-2/"
   },
   
   {
   "title": "Zoe command line demo",
-  "url": "/zoe-website-test//blog/2016/02/16/zoe-commandline-demo/"
+  "url": "/zoe-website-test/blog/2016/02/16/zoe-commandline-demo/"
   },
   
   {
   "title": "Zoe in production at Eurecom",
-  "url": "/zoe-website-test//blog/2016/02/07/zoe-in-production/"
+  "url": "/zoe-website-test/blog/2016/02/07/zoe-in-production/"
   },
   
   {
   "title": "Zoe at DockerCon EU 2015",
-  "url": "/zoe-website-test//blog/2016/01/10/zoe-at-dockerconeu/"
+  "url": "/zoe-website-test/blog/2016/01/10/zoe-at-dockerconeu/"
   }
   
 ]

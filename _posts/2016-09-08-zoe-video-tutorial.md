@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Zoe command line demo
+title: Zoe video tutorial
 author: Daniele Venzano
 ---
 
