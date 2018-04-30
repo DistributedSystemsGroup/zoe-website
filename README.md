@@ -4,8 +4,7 @@ Go to [the website](https://aksakalli.github.io/jekyll-doc-theme/) for detailed 
 
 ## Running locally
 
-You need Ruby and gem before starting, then:
-
+You need Ruby (the one in Trusty is too old) and gem before starting, then:
 ```bash
 # install bundler
 gem install bundler
@@ -18,7 +17,7 @@ cd jekyll-doc-theme
 bundle install
 
 # run jekyll with dependencies
-bundle exec jekyll serve
+bundle exec jekyll serve  --host 0.0.0.0 --port 5555
 ```
 
 ## Adding posts
