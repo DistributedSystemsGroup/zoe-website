@@ -1,5 +1,5 @@
 ---
-title: Zapps
+title: ZApps
 layout: docs
 permalink: /zapps/
 ---

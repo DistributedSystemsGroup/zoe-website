@@ -4,8 +4,6 @@ title: About
 permalink: /about/
 ---
 
-## The project
-
 Zoe was born in 2015 as a solution to the growing need in Eurecom to have a flexible and reproducible environment to do research on data intensive frameworks.
 Virtual machines, managed via OpenStack, were cumbersome and users, once finished with their work, would not terminate them, wasting resources in our computing cluster.
 
@@ -26,7 +24,7 @@ The project is released with an open source license. The source code is availabl
 
 For more information about the Data Science department at Eurecom, please visit the [institutional website](http://www.eurecom.fr/en/research/department-data-science).
 
-### Focus
+## Project focus
 
 Zoe focus is data analytics. This focus helps defining a clear set of objectives and priorities for the project and avoid the risk of competing directly with generic infrastructure managers like Kubernetes or Swarm. Zoe instead sits on top of these "cloud managers" to provide a simpler interface to end users who have no interest in the intricacies of container infrastructures.
 
