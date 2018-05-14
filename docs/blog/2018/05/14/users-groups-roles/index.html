@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Users, roles and quotas</title>
+    <meta name="description" content="Up to the 2017.12 version, Zoe did not have a real user management system. Authentication was delegated to a third-party service (LDAP) and Zoe retained only...">
+
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="/favicon.ico?1">
+    <!-- Begin Jekyll SEO tag v2.2.2 -->
+<title>Users, roles and quotas | Zoe - Analytics on demand</title>
+<meta property="og:title" content="Users, roles and quotas" />
+<meta name="author" content="Daniele Venzano" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Up to the 2017.12 version, Zoe did not have a real user management system. Authentication was delegated to a third-party service (LDAP) and Zoe retained only a user identifier to assign an owner to executions. Three groups where defined statically: guest, user and admin and everyone had to fit in one of these three groups." />
+<meta property="og:description" content="Up to the 2017.12 version, Zoe did not have a real user management system. Authentication was delegated to a third-party service (LDAP) and Zoe retained only a user identifier to assign an owner to executions. Three groups where defined statically: guest, user and admin and everyone had to fit in one of these three groups." />
+<link rel="canonical" href="https://zoe-analytics.eu/blog/2018/05/14/users-groups-roles/" />
+<meta property="og:url" content="https://zoe-analytics.eu/blog/2018/05/14/users-groups-roles/" />
+<meta property="og:site_name" content="Zoe - Analytics on demand" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-05-14T00:00:00+02:00" />
+<script type="application/ld+json">
+{"@context":"http://schema.org","@type":"BlogPosting","headline":"Users, roles and quotas","author":{"@type":"Person","name":"Daniele Venzano"},"datePublished":"2018-05-14T00:00:00+02:00","dateModified":"2018-05-14T00:00:00+02:00","description":"Up to the 2017.12 version, Zoe did not have a real user management system. Authentication was delegated to a third-party service (LDAP) and Zoe retained only a user identifier to assign an owner to executions. Three groups where defined statically: guest, user and admin and everyone had to fit in one of these three groups.","mainEntityOfPage":{"@type":"WebPage","@id":"https://zoe-analytics.eu/blog/2018/05/14/users-groups-roles/"},"url":"https://zoe-analytics.eu/blog/2018/05/14/users-groups-roles/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="canonical" href="https://zoe-analytics.eu/blog/2018/05/14/users-groups-roles/">
+    <link rel="alternate" type="application/rss+xml" title="Zoe - Analytics on demand" href="https://zoe-analytics.eu/feed.xml" />
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="/">
+                <span><img src="/img/logonav.png"></span> Zoe - Analytics on demand
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li  class="active" ><a href="/blog/2018/05/14/users-groups-roles/">Blog</a></li>
+                <li><a href="http://docs.zoe-analytics.eu">Docs</a></li>
+                <li ><a href="/papers/">Papers</a></li>
+                <li ><a href="/zapps/">ZApps</a></li>
+                <li ><a href="/about/">About</a></li>
+            </ul>
+            <div class="navbar-right">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group has-feedback">
+                        <input id="search-box" type="text" class="form-control" placeholder="Search...">
+                        <i class="fa fa-search form-control-feedback"></i>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav">
+                    <li><a href="https://github.com/DistributedSystemsGroup/zoe"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="container">
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="well">
+                <h4>RECENT POSTS</h4>
+                <ul class="list-unstyled post-list-container">
+                    
+                    <li><a href="/blog/2018/05/14/users-groups-roles/"  class="active" >Users, roles and quotas</a></li>
+                    
+                    <li><a href="/blog/2017/12/15/release-zoe-2017-12/" >Latest stable release of Zoe 2017.12</a></li>
+                    
+                    <li><a href="/blog/2017/09/30/release-zoe-2017-09/" >Latest stable release of Zoe 2017.09</a></li>
+                    
+                    <li><a href="/blog/2017/06/30/release-zoe-2017-06/" >We are proud to announce the latest stable release of Zoe 2017.06</a></li>
+                    
+                    <li><a href="/blog/2017/03/31/release-zoe-2017-03/" >2017.03 release is now live on github!</a></li>
+                    
+                    <li><a href="/blog/2016/09/08/zoe-video-tutorial/" >Zoe video tutorial</a></li>
+                    
+                    <li><a href="/blog/2016/08/24/donating-cpu-cycles/" >Donating idle CPU cycles</a></li>
+                    
+                    <li><a href="/blog/2016/07/13/zoe-supports-cassandra/" >Zoe supports Cassandra</a></li>
+                    
+                    <li><a href="/blog/2016/05/27/spark-2/" >Docker images for Spark 2.0.0-preview</a></li>
+                    
+                    <li><a href="/blog/2016/02/25/zoe-commandline-demo-2/" >Zoe command line demo</a></li>
+                    
+                    <li><a href="/allposts">All posts ...</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <h1>Users, roles and quotas</h1>
+            <p>May 14, 2018 • Daniele Venzano</p>
+            <div  id="markdown-content-container"><p>Up to the 2017.12 version, Zoe did not have a real user management system. Authentication was delegated to a third-party service (LDAP) and Zoe retained only a user identifier to assign an owner to executions. Three groups where defined statically: guest, user and admin and everyone had to fit in one of these three groups.</p>
+
+<p>This simple implementation soon started to show its limits:</p>
+
+<ul>
+  <li>Workspace permissions: Zoe manages workspaces, but has no idea of the UID of each user, so it has no way of telling Zoe applications under which user they should access the workspace. When the user accesses the workspace, it finds a mixture of random UIDs as owners of its files and, consequently, cannot open or delete some of them.</li>
+  <li>Limited groups meant that administrators had to fit everyone in only three categories, each with fixed permissions and quotas</li>
+  <li>Inflexible quotas defined in the source code, just for guest users</li>
+</ul>
+
+<p>To move onward and fix all these problems, we decided to invest the time and properly develop a full user management system, with roles and quotas. This work is mostly finished in the current <a href="https://github.com/DistributedSystemsGroup/zoe/tree/devel/master">development master branch</a>.</p>
+
+<p>The Zoe database now contains three more tables, called <code class="highlighter-rouge">user</code>, <code class="highlighter-rouge">quota</code> and <code class="highlighter-rouge">role</code>.</p>
+
+<h3 id="users">Users</h3>
+
+<p>Each user that want to access a certain Zoe deployment will need to have an entry in the <code class="highlighter-rouge">user</code> table. This table contains:</p>
+
+<ul>
+  <li>the username</li>
+  <li>the authentication backend : each user can be authenticated in a different way. For example you can have staff members authenticated via LDAP, visiting researchers via the internal Zoe authentication (fast and easy to manage) and students authenticated via a text file generated by a script.</li>
+  <li>the filesystem UID to use when accessing the workspace : this UID needs to be communicated to the containers to be useful. See below how we are trying to solve this additional problem</li>
+  <li>a password : only in case the authentication back-end is internal. The password is hashed with a salt, via the <a href="https://passlib.readthedocs.io/en/stable/index.html">Passlib</a> library.</li>
+  <li>an email for sending out notifications</li>
+  <li>… and other fields</li>
+</ul>
+
+<p>Users can also enabled and disabled and have a quota and a role associated. As for authentication we also added PAM authentication, using the PAM subsystem of the host running the zoe_api process.</p>
+
+<h3 id="quotas">Quotas</h3>
+
+<p>A quota, once defined, can be assigned to multiple users. Quotas limit how many resources can be reserved at once by a user. For now the only limit is the number of concurrently running executions, next we will implement limits on the maximum amount of cores and memory that can be reserved.</p>
+
+<h3 id="roles">Roles</h3>
+
+<p>A role, like a quota, once defined can be assigned to multiple users. Roles define the capabilities of a user in Zoe. Currently we have the following capabilities:</p>
+
+<ul>
+  <li>can_see_status : can access the status page on the web interface</li>
+  <li>can_change_config : can make changes to the configuration (add/delete/modify users, quotas and roles)</li>
+  <li>can_operate_others : can operate on others’ work (see and terminate other users’ executions)</li>
+  <li>can_delete_executions : can permanently delete executions and all the associated logs</li>
+  <li>can_access_api : can access the REST API</li>
+  <li>can_customize_resources : can use the web interface to modify resource reservations when starting ZApps from the shop</li>
+  <li>can_access_full_zapp_shop : has access to all ZApps in the shop</li>
+</ul>
+
+<h2 id="permissions-in-containers">Permissions in containers</h2>
+
+<p>Thanks to the new user system, Zoe knows which user/UID/GID should be used to run the processes in each container of a ZApp execution. Unfortunately most of the images available from the Docker Hub do not care at all and run the processes as root. Jupyter made an effort and runs processes with UID 1000 by default.</p>
+
+<p>One of the principles that Zoe always tried to adhere to has been to let users run whatever image they would like, without any change. Currently we are running standard PyTorch, Tensorflow and Jupyter images, but users complain of undeletable files in they workspace and too broad permissions, letting other users peek into one’s workspace.</p>
+
+<p>One solution is to make sure all processes run as root (UID 0) in containers and allow access to workspaces via per-user containers, preventing access to other workspace via container isolation. This is suboptimal for a number of reasons:</p>
+
+<ul>
+  <li>“users running stuff as root” makes any good sysadmin cringe for very good reasons</li>
+  <li>the files in the workspace will be owned by root, also on the host systems</li>
+  <li>users will need to start a special execution for the gateway container each time they want to copy some files from/to the workspace via SFTP and they have to remember to terminate it when finished</li>
+</ul>
+
+<p>Another solution is to create all container images from a base image that does UID management when the container is started, taking the UID from the environment variables generated by Zoe. This has its own set of problems:</p>
+
+<ul>
+  <li>users are no longer able to run <code class="highlighter-rouge">apt-get install</code> to install some random library that is not available in the image</li>
+  <li>sysadmins need to create and manage images, even when perfectly good ones are already available on the Internet</li>
+</ul>
+
+<p>There isn’t a <em>good</em> solution, it really depends on the use case. At Eurecom we are moving toward the second solution. Users access Zoe via a unified SSH gateway and we cannot have that coexist with root-owned files.</p>
+
+<h2 id="next-steps">Next steps</h2>
+
+<h3 id="zapp-shop">ZApp shop</h3>
+
+<p>We are working on a good solution for managing access to Zoe applications in the ZApp shop. Ideally an administrator would want to restrict access to some ZApps only to some users.</p>
+
+<h3 id="administrator-web-interface">Administrator web interface</h3>
+
+<p>Users, roles and quotas can be managed from the command line. A nice to have, in the future, is to have the same capability built-in the web interface.</p>
+
+<h3 id="zoe-images-for-data-science-frameworks">Zoe images for data science frameworks</h3>
+
+<p>We are slowly building a library of Docker images that understand environment variables about users and UIDs.</p>
+
+</div>
+            <hr>
+            <ul class="pager">
+                
+                <li class="previous">
+                    <a href="/blog/2017/12/15/release-zoe-2017-12/">
+                        <span aria-hidden="true">&larr;</span> Older
+                    </a>
+                </li>
+                 
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="container">
+
+        <p class="text-center">
+            Zoe - Analytics on demand 2018 |
+            Powered by <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll Doc Theme</a>
+        </p>
+        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+    </div>
+</footer>
+
+    <script>
+  var baseurl = ''
+</script>
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="/js/bootstrap.min.js "></script>
+<script src="/js/typeahead.bundle.min.js "></script>
+
+<script src="/js/main.js "></script>
+
+</body>
+
+</html>
