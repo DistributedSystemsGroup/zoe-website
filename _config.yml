@@ -48,6 +48,14 @@ defaults:
     seo:
       type: "WebPage"
 
+plugins_dir:
+  - jekyll-analytics
+
+jekyll_analytics:
+  GoogleAnalytics:          # Add, if you want to track with Google Analytics
+    id: UA-68856151-1          # Required - replace with your tracking id
+    anonymizeIp: false      # Optional - Default: false - set to true for anonymized tracking
+
 collections:
   docs:
     permalink: /:collection/:path/
