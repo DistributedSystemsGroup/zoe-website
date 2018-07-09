@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>2017.03 release is now live on github!</title>
-    <meta name="description" content="This release marks an important turning point for Zoe. More contributors are joining the project, merging very interesting new features. Moreover all release...">
+    <title>The problem with metrics</title>
+    <meta name="description" content="Currently the Zoe deployment at Eurecom is based on a Docker-on-bare-metal configuration. We have been playing with the idea ofmoving to Kubernetes on VMs, e...">
 
 
     <link rel="stylesheet" href="/css/main.css">
@@ -15,23 +15,23 @@
 
     <link rel="shortcut icon" href="/favicon.ico?1">
     <!-- Begin Jekyll SEO tag v2.2.2 -->
-<title>2017.03 release is now live on github! | Zoe - Analytics on demand</title>
-<meta property="og:title" content="2017.03 release is now live on github!" />
+<title>The problem with metrics | Zoe - Analytics on demand</title>
+<meta property="og:title" content="The problem with metrics" />
 <meta name="author" content="Daniele Venzano" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="This release marks an important turning point for Zoe. More contributors are joining the project, merging very interesting new features. Moreover all releases are now tested through a fully automated continuous integration pipeline." />
-<meta property="og:description" content="This release marks an important turning point for Zoe. More contributors are joining the project, merging very interesting new features. Moreover all releases are now tested through a fully automated continuous integration pipeline." />
-<link rel="canonical" href="https://zoe-analytics.eu/blog/2017/03/31/release-zoe-2017-03/" />
-<meta property="og:url" content="https://zoe-analytics.eu/blog/2017/03/31/release-zoe-2017-03/" />
+<meta name="description" content="Currently the Zoe deployment at Eurecom is based on a Docker-on-bare-metal configuration. We have been playing with the idea of moving to Kubernetes on VMs, expanding our OpenStack deployment to all our servers." />
+<meta property="og:description" content="Currently the Zoe deployment at Eurecom is based on a Docker-on-bare-metal configuration. We have been playing with the idea of moving to Kubernetes on VMs, expanding our OpenStack deployment to all our servers." />
+<link rel="canonical" href="https://zoe-analytics.eu/blog/2018/06/28/the-metrics-problem/" />
+<meta property="og:url" content="https://zoe-analytics.eu/blog/2018/06/28/the-metrics-problem/" />
 <meta property="og:site_name" content="Zoe - Analytics on demand" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2017-03-31T00:00:00+02:00" />
+<meta property="article:published_time" content="2018-06-28T00:00:00+02:00" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"BlogPosting","headline":"2017.03 release is now live on github!","author":{"@type":"Person","name":"Daniele Venzano"},"datePublished":"2017-03-31T00:00:00+02:00","dateModified":"2017-03-31T00:00:00+02:00","description":"This release marks an important turning point for Zoe. More contributors are joining the project, merging very interesting new features. Moreover all releases are now tested through a fully automated continuous integration pipeline.","mainEntityOfPage":{"@type":"WebPage","@id":"https://zoe-analytics.eu/blog/2017/03/31/release-zoe-2017-03/"},"url":"https://zoe-analytics.eu/blog/2017/03/31/release-zoe-2017-03/"}</script>
+{"@context":"http://schema.org","@type":"BlogPosting","headline":"The problem with metrics","author":{"@type":"Person","name":"Daniele Venzano"},"datePublished":"2018-06-28T00:00:00+02:00","dateModified":"2018-06-28T00:00:00+02:00","description":"Currently the Zoe deployment at Eurecom is based on a Docker-on-bare-metal configuration. We have been playing with the idea of moving to Kubernetes on VMs, expanding our OpenStack deployment to all our servers.","mainEntityOfPage":{"@type":"WebPage","@id":"https://zoe-analytics.eu/blog/2018/06/28/the-metrics-problem/"},"url":"https://zoe-analytics.eu/blog/2018/06/28/the-metrics-problem/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-    <link rel="canonical" href="https://zoe-analytics.eu/blog/2017/03/31/release-zoe-2017-03/">
+    <link rel="canonical" href="https://zoe-analytics.eu/blog/2018/06/28/the-metrics-problem/">
     <link rel="alternate" type="application/rss+xml" title="Zoe - Analytics on demand" href="https://zoe-analytics.eu/feed.xml" />
 
     <!-- Google Analytics -->
@@ -98,7 +98,7 @@
                 <h4>RECENT POSTS</h4>
                 <ul class="list-unstyled post-list-container">
                     
-                    <li><a href="/blog/2018/06/28/the-metrics-problem/" >The problem with metrics</a></li>
+                    <li><a href="/blog/2018/06/28/the-metrics-problem/"  class="active" >The problem with metrics</a></li>
                     
                     <li><a href="/blog/2018/05/14/users-groups-roles/" >Users, roles and quotas</a></li>
                     
@@ -108,7 +108,7 @@
                     
                     <li><a href="/blog/2017/06/30/release-zoe-2017-06/" >We are proud to announce the latest stable release of Zoe 2017.06</a></li>
                     
-                    <li><a href="/blog/2017/03/31/release-zoe-2017-03/"  class="active" >2017.03 release is now live on github!</a></li>
+                    <li><a href="/blog/2017/03/31/release-zoe-2017-03/" >2017.03 release is now live on github!</a></li>
                     
                     <li><a href="/blog/2016/09/08/zoe-video-tutorial/" >Zoe video tutorial</a></li>
                     
@@ -124,35 +124,50 @@
         </div>
 
         <div class="col-md-8">
-            <h1>2017.03 release is now live on github!</h1>
-            <p>Mar 31, 2017 • Daniele Venzano</p>
-            <div  id="markdown-content-container"><p>This release marks an important turning point for Zoe. More contributors are joining the project, merging very interesting new features. Moreover all releases are now tested through a fully automated continuous integration pipeline.</p>
+            <h1>The problem with metrics</h1>
+            <p>Jun 28, 2018 • Daniele Venzano</p>
+            <div  id="markdown-content-container"><p>Currently the Zoe deployment at Eurecom is based on a Docker-on-bare-metal configuration. We have been playing with the idea of
+moving to Kubernetes on VMs, expanding our OpenStack deployment to all our servers.</p>
+
+<p>The biggest issue we have is recording metrics about who used which resources, when and how. The current system is based on telegraf, kafka and postgres.
+Unfortunately telegraf is unable to record VM statistics (<a href="https://github.com/influxdata/telegraf/issues/243">Bug open since 2015</a>).</p>
+
+<p>OpenStack comes with its own metering project, called Ceilometer. Ceilometer has recently changed its focus, dropping part of its functionality and focusing
+only on gathering metrics. For storing these metrics OpenStack now proposes a new project, called Gnocchi.</p>
+
+<p>So basically, to go the OpenStack way, we have to rebuild our measurement pipeline around Ceilometer and Gnocchi.</p>
+
+<p>I dived in and tested these projects to understand how they work and their level of maturity. TL;DR is: not mature enough.</p>
+
+<p>Currently we have 4 compute hosts with ~15 VMs. This is a very small cloud.</p>
+
+<p>Ceilometer + Gnocchi managed to push the load on keystone (the authentication service) beyond horizons never seen before. A token cache can
+help, but the problem is in the architecture. Each time Ceilometer wants to store some metrics, it requests a token from keystone, opens an http connection
+to gnocchi and gnocchi checks the token. This is very, very wasteful. Yes, you can scale everything horizontally, but when you need to start scaling for metrics about 15 VMs, there is a problem.</p>
+
+<p>With caches and some scaling I managed to bring the system up and to make it more or less performant. So I started looking into the user visualization part: storing big
+amounts of metrics in Gnocchi is good, but how to access it? A Grafana plugin is provided. We already use Grafana, so this is very good.<br />
+Unfortunately there are some issues there too. For example math between two metrics recorded at different intervals is not managed correctly, for example vm_memory_size (once per hour) divided by vm_memory_usage (once every 10 seconds) produces errors about invalid JSON.</p>
+
+<p>I encountered a number of other issues in Gnocchi and Grafana that make me think that they are not really used in production by anyone and that they need more time to mature. I like Gnocchi for the following reasons:</p>
 
 <ul>
-  <li>We have moved to a regular, three-months release cycle. Development happens on a separate repository, join the mailing list to participate actively to the development.</li>
-  <li>Version numbers are now based on the date of the release</li>
-  <li>Kubernetes back-end: Zoe can now start ZApps on Kubernetes instead of Swarm</li>
-  <li>Deployments scripts for Linux and Windows ease the installation of Zoe</li>
-  <li>The elastic scheduler implements an advanced algorithm for optimizing resource utilization: read the paper describing the details</li>
-  <li>A preview of the new web interface based on AngularJS that will be fully developed in the next release</li>
+  <li>it uses a CEPH backend to store data: we already have CEPH and use it quite a lot, we have the tooling, the experience, etc.</li>
+  <li>it is simple to understand, especially the archive policies let you decide the amount of data you want to store with some simple calculations on a piece of paper, so yo now since the beginning how much capacity yo need to reserve</li>
 </ul>
+
+<p>OpenStack moves fast, so hopefully these project will mature quickly. We’ll return to them in a while to check their status.</p>
 
 </div>
             <hr>
             <ul class="pager">
                 
                 <li class="previous">
-                    <a href="/blog/2016/09/08/zoe-video-tutorial/">
+                    <a href="/blog/2018/05/14/users-groups-roles/">
                         <span aria-hidden="true">&larr;</span> Older
                     </a>
                 </li>
                  
-                <li class="next">
-                    <a href="/blog/2017/06/30/release-zoe-2017-06/">
-                      Newer <span aria-hidden="true">&rarr;</span>
-                    </a>
-                </li>
-                
             </ul>
         </div>
 
